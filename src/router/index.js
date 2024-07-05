@@ -33,20 +33,10 @@ const routes = [
     ]
   },
   {
-    path: '/register',
-    name: 'register',
-    component: () => import('../views/RegisterView.vue')
-  },
-  {
     path: '/login',
     name: 'login',
     component: () => import('../views/pages/login.vue')
-  },
-  {
-    path: '/forgetpwd',
-    name: 'forgetpwd',
-    component: () => import('../views/Forgetpwd.vue'),
-  },
+  }
 ]
 
 const router = createRouter({
@@ -65,20 +55,20 @@ const router = createRouter({
  * from：哪个页面跳的
  * next：放行函数，如果调用 next() 则表示放行，否则表示取消跳转
  */
-// router.beforeEach((to, from, next) => {
-//   // 登录验证
-//   console.log(store.state.userLogin);
-//   const uInfo = store.state.userLogin.userLogin;
-//   // console.log(uInfo.username);
-//   if (!uInfo.username) {
-//     if (to.path === '/login') {
-//       next()
-//       return;
-//     }
-//     next('/login')
-//   } else {
-//     next()
-//   }
-// })
+router.beforeEach((to, from, next) => {
+  // 登录验证
+  console.log(store.state.userLogin);
+  const uInfo = store.state.userLogin.userLogin;
+  // console.log(uInfo.username);
+  if (!uInfo.username) {
+    if (to.path === '/login') {
+      next()
+      return;
+    }
+    next('/login')
+  } else {
+    next()
+  }
+})
 
 export default router

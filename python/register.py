@@ -28,11 +28,11 @@ import os
 app = Flask(__name__)
 
 connect=pymysql.Connect(
-    host='localhost',
-    port=7777,
+    host='your_host_name',
+    port=3306,
     user='root',
-    passwd='loveat2024a+.',
-    db='taobao',
+    passwd='your_password',
+    db='your_database_name',
     charset='utf8'
 )
 
