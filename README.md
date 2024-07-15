@@ -6,6 +6,10 @@
 
 本项目是一个基于Vue3、python的前后端分离的商品后台管理系统项目，用于管理商品信息。项目使用了Vue Router进行路由管理。项目还使用了Element Plus组件库，用于快速构建UI界面。
 
+前端：采用组件化、单页面应用、状态管理的思想，使用Vue3进行开发，使用Element Plus组件库快速构建UI界面。
+
+后端：采用Python Flask框架进行开发，使用Flask-RESTful扩展实现RESTful API，使用模块化设计，使得代码结构更加清晰，便于维护和扩展。
+
 ## 效果图
 
 ![1](./img/1.PNG)
